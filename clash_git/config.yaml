@@ -1,0 +1,664 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: '127.0.0.1:9090'
+dns:
+    enable: true
+    ipv6: false
+    default-nameserver: [223.5.5.5, 119.29.29.29]
+    enhanced-mode: fake-ip
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
+    fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
+    fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
+proxies:
+    - { name: '剩余流量：9699.64 GB', type: vmess, server: hk0106.alibabaokz.com, port: 60126, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 套餐到期：长期有效, type: vmess, server: hk0106.alibabaokz.com, port: 60126, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: '通知页: okz8.com 客服在右下角', type: vmess, server: hk0106.alibabaokz.com, port: 60126, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: '官网: okzlist.com 客服在右下角', type: vmess, server: hk0106.alibabaokz.com, port: 60126, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 专线1, type: vmess, server: hk0106.alibabaokz.com, port: 60126, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 专线2, type: vmess, server: hk0127.alibabaokz.com, port: 60126, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 专线3, type: vmess, server: hk0107.alibabaokz.com, port: 60237, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 专线4, type: vmess, server: hk0194.alibabaokz.com, port: 60237, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 专线5, type: vmess, server: hk0002.alibabaokz.com, port: 60001, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 专线6, type: vmess, server: hk0003.alibabaokz.com, port: 60001, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 专线7, type: vmess, server: hk0004.alibabaokz.com, port: 60238, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 专线8, type: vmess, server: hk0004.alibabaokz.com, port: 60238, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 香港', type: vmess, server: hk0074.alibabaokz.com, port: 60049, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 香港', type: vmess, server: hk0172.alibabaokz.com, port: 60049, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 香港', type: vmess, server: hk0173.alibabaokz.com, port: 60049, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 香港1', type: trojan, server: hk00207.alibabaokz.com, port: 61206, password: 38571ca6-6692-4559-b901-0bc5826b7661, udp: true, skip-cert-verify: true }
+    - { name: 'Lv2 香港1', type: trojan, server: hk00208.alibabaokz.com, port: 61206, password: 38571ca6-6692-4559-b901-0bc5826b7661, udp: true, skip-cert-verify: true }
+    - { name: 'Lv3 香港1', type: trojan, server: hk00209.alibabaokz.com, port: 61206, password: 38571ca6-6692-4559-b901-0bc5826b7661, udp: true, skip-cert-verify: true }
+    - { name: 'Lv1 香港2', type: vmess, server: hk0061.alibabaokz.com, port: 60025, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 香港2', type: vmess, server: hk0027.alibabaokz.com, port: 60025, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 香港2', type: vmess, server: hk0026.alibabaokz.com, port: 60025, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 香港4', type: vmess, server: hk0067.alibabaokz.com, port: 60066, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 香港4', type: vmess, server: hk0069.alibabaokz.com, port: 60066, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 香港4', type: vmess, server: hk0131.alibabaokz.com, port: 60066, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 香港5', type: vmess, server: hk0046.alibabaokz.com, port: 60045, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 香港5', type: vmess, server: hk0092.alibabaokz.com, port: 60045, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 香港5', type: vmess, server: hk0091.alibabaokz.com, port: 60045, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 香港6', type: vmess, server: hk0208.alibabaokz.com, port: 60207, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 香港6', type: vmess, server: hk0209.alibabaokz.com, port: 60207, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 香港6', type: vmess, server: hk0210.alibabaokz.com, port: 60207, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 香港7', type: vmess, server: hk0208.alibabaokz.com, port: 60243, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 香港7', type: vmess, server: hk0209.alibabaokz.com, port: 60243, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 香港7', type: vmess, server: hk0210.alibabaokz.com, port: 60243, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 台湾2', type: vmess, server: tw0182.alibabaokz.com, port: 60181, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 台湾2', type: vmess, server: tw0183.alibabaokz.com, port: 60181, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 台湾2', type: vmess, server: tw0184.alibabaokz.com, port: 60181, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 日本0', type: vmess, server: jp0088.alibabaokz.com, port: 14315, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 日本0', type: vmess, server: jp0090.alibabaokz.com, port: 14315, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 日本0', type: vmess, server: jp0089.alibabaokz.com, port: 14315, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 日本1', type: vmess, server: jp0103.alibabaokz.com, port: 60030, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 日本1', type: vmess, server: jp0105.alibabaokz.com, port: 60030, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 日本1', type: vmess, server: jp0132.alibabaokz.com, port: 60030, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 日本2', type: vmess, server: jp0116.alibabaokz.com, port: 60115, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 日本2', type: vmess, server: jp0118.alibabaokz.com, port: 60115, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 日本2', type: vmess, server: jp0117.alibabaokz.com, port: 60115, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 日本3', type: vmess, server: jp0159.alibabaokz.com, port: 60034, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 日本3', type: vmess, server: jp0160.alibabaokz.com, port: 60034, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 日本3', type: vmess, server: jp0161.alibabaokz.com, port: 60034, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 日本5', type: vmess, server: jp0095.alibabaokz.com, port: 60029, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 日本5', type: vmess, server: jp0056.alibabaokz.com, port: 60029, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 日本5', type: vmess, server: jp0096.alibabaokz.com, port: 60029, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 韩国1', type: vmess, server: kr0020.alibabaokz.com, port: 60019, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 韩国1', type: vmess, server: kr0086.alibabaokz.com, port: 60019, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 韩国1', type: vmess, server: kr0087.alibabaokz.com, port: 60019, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 韩国2', type: trojan, server: kr0196.alibabaokz.com, port: 60195, password: 38571ca6-6692-4559-b901-0bc5826b7661, udp: true, sni: kr-ora-195.okzdns.com }
+    - { name: 'Lv2 韩国2', type: trojan, server: kr0200.alibabaokz.com, port: 60195, password: 38571ca6-6692-4559-b901-0bc5826b7661, udp: true, sni: kr-ora-195.okzdns.com }
+    - { name: 'Lv3 韩国2', type: trojan, server: kr0201.alibabaokz.com, port: 60195, password: 38571ca6-6692-4559-b901-0bc5826b7661, udp: true, sni: kr-ora-195.okzdns.com }
+    - { name: 'Lv1 韩国4', type: vmess, server: kr0204.alibabaokz.com, port: 60197, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 韩国4', type: vmess, server: kr0203.alibabaokz.com, port: 60197, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 韩国4', type: vmess, server: kr0204.alibabaokz.com, port: 60197, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 韩国5', type: vmess, server: kr0199.alibabaokz.com, port: 60198, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 韩国5', type: vmess, server: kr0205.alibabaokz.com, port: 60198, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 韩国5', type: vmess, server: kr0206.alibabaokz.com, port: 60198, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 新加坡1', type: vmess, server: sg0112.alibabaokz.com, port: 60041, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 新加坡1', type: vmess, server: sg0114.alibabaokz.com, port: 60041, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 新加坡1', type: vmess, server: sg0113.alibabaokz.com, port: 60041, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 新加坡2', type: vmess, server: sg0100.alibabaokz.com, port: 60031, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 新加坡2', type: vmess, server: sg0102.alibabaokz.com, port: 60031, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 新加坡2', type: vmess, server: sg0101.alibabaokz.com, port: 60031, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 新加坡3', type: vmess, server: sg0165.alibabaokz.com, port: 60021, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 新加坡3', type: vmess, server: sg0166.alibabaokz.com, port: 60021, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 新加坡3', type: vmess, server: sg0167.alibabaokz.com, port: 60021, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 新加坡4', type: vmess, server: sg0168.alibabaokz.com, port: 60022, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 新加坡4', type: vmess, server: sg0169.alibabaokz.com, port: 60022, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 新加坡4', type: vmess, server: sg0170.alibabaokz.com, port: 60022, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 新加坡6', type: vmess, server: sg0120.alibabaokz.com, port: 60119, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 新加坡6', type: vmess, server: sg0121.alibabaokz.com, port: 60119, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 新加坡6', type: vmess, server: sg0133.alibabaokz.com, port: 60119, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 英国1', type: vmess, server: eu0097.alibabaokz.com, port: 46719, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 英国1', type: vmess, server: eu0098.alibabaokz.com, port: 46719, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 英国1', type: vmess, server: eu0099.alibabaokz.com, port: 46719, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 英国2', type: vmess, server: eu0136.alibabaokz.com, port: 60042, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 英国2', type: vmess, server: eu0137.alibabaokz.com, port: 60042, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 英国2', type: vmess, server: eu0138.alibabaokz.com, port: 60042, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 美国1', type: vmess, server: us0175.alibabaokz.com, port: 60174, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 美国1', type: vmess, server: us0176.alibabaokz.com, port: 60174, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 美国1', type: vmess, server: us0177.alibabaokz.com, port: 60174, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 美国3', type: vmess, server: us0141.alibabaokz.com, port: 60140, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 美国3', type: vmess, server: us0142.alibabaokz.com, port: 60140, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 美国3', type: vmess, server: us0143.alibabaokz.com, port: 60140, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 美国4', type: vmess, server: us0147.alibabaokz.com, port: 60157, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 美国4', type: vmess, server: us0142.alibabaokz.com, port: 60157, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 美国4', type: vmess, server: us0149.alibabaokz.com, port: 60157, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 美国5', type: vmess, server: us0150.alibabaokz.com, port: 60145, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 美国5', type: vmess, server: us0151.alibabaokz.com, port: 60145, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 美国5', type: vmess, server: us0152.alibabaokz.com, port: 60145, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 美国6', type: vmess, server: us0153.alibabaokz.com, port: 60146, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 美国6', type: vmess, server: us0154.alibabaokz.com, port: 60146, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 美国6', type: vmess, server: us0155.alibabaokz.com, port: 60146, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 迪拜', type: vmess, server: db0109.alibabaokz.com, port: 60108, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 迪拜', type: vmess, server: db0111.alibabaokz.com, port: 60108, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 迪拜', type: vmess, server: db0110.alibabaokz.com, port: 60108, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 越南', type: vmess, server: yn0075.alibabaokz.com, port: 60040, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 越南', type: vmess, server: yn0076.alibabaokz.com, port: 60040, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 越南', type: vmess, server: yn0077.alibabaokz.com, port: 60040, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 荷兰', type: vmess, server: hl0078.alibabaokz.com, port: 60044, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'LV2 荷兰', type: vmess, server: hl0079.alibabaokz.com, port: 60044, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 荷兰', type: vmess, server: hl0080.alibabaokz.com, port: 60044, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 马来西亚 x5', type: vmess, server: ml0070.alibabaokz.com, port: 60024, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 马来西亚 x5', type: vmess, server: ml0071.alibabaokz.com, port: 60024, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 马来西亚 x5', type: vmess, server: ml0072.alibabaokz.com, port: 60024, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 印尼', type: vmess, server: yn0038.alibabaokz.com, port: 60037, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 印尼', type: vmess, server: yn0050.alibabaokz.com, port: 60037, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 印尼', type: vmess, server: yn0085.alibabaokz.com, port: 60037, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 土耳其 X5', type: vmess, server: tu0082.alibabaokz.com, port: 60081, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 土耳其 X5', type: vmess, server: tu0083.alibabaokz.com, port: 60081, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 土耳其 X5', type: vmess, server: tu0084.alibabaokz.com, port: 60081, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 土耳其2 原生', type: vmess, server: tu0187.alibabaokz.com, port: 60186, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 土耳其2 原生', type: vmess, server: tu0188.alibabaokz.com, port: 60186, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 土耳其2 原生', type: vmess, server: tu0189.alibabaokz.com, port: 60186, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 印度', type: vmess, server: in0212.alibabaokz.com, port: 60211, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 印度', type: vmess, server: in0213.alibabaokz.com, port: 60211, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 印度', type: vmess, server: in0214.alibabaokz.com, port: 60211, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv1 阿根廷 x10', type: vmess, server: agt0217.alibabaokz.com, port: 60216, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv2 阿根廷 x10', type: vmess, server: agt0218.alibabaokz.com, port: 60216, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 'Lv3 阿根廷 x10', type: vmess, server: agt0219.alibabaokz.com, port: 60216, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: '泰國-曼谷 X10', type: vmess, server: tg0226.alibabaokz.com, port: 60225, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: '菲律賓 X10', type: vmess, server: flb0227.alibabaokz.com, port: 60227, uuid: 38571ca6-6692-4559-b901-0bc5826b7661, alterId: 0, cipher: auto, udp: true }
+    - { name: 俄罗斯, type: trojan, server: ru0195.alibabaokz.com, port: 60194, password: 38571ca6-6692-4559-b901-0bc5826b7661, udp: true, sni: russia.okzdns.com, skip-cert-verify: true }
+proxy-groups:
+    - { name: OKZTWO, type: select, proxies: [自动选择, 故障转移, '剩余流量：9699.64 GB', 套餐到期：长期有效, '通知页: okz8.com 客服在右下角', '官网: okzlist.com 客服在右下角', 专线1, 专线2, 专线3, 专线4, 专线5, 专线6, 专线7, 专线8, 'Lv1 香港', 'Lv2 香港', 'Lv3 香港', 'Lv1 香港1', 'Lv2 香港1', 'Lv3 香港1', 'Lv1 香港2', 'Lv2 香港2', 'Lv3 香港2', 'Lv1 香港4', 'Lv2 香港4', 'Lv3 香港4', 'Lv1 香港5', 'Lv2 香港5', 'Lv3 香港5', 'Lv1 香港6', 'Lv2 香港6', 'Lv3 香港6', 'Lv1 香港7', 'Lv2 香港7', 'Lv3 香港7', 'Lv1 台湾2', 'Lv2 台湾2', 'Lv3 台湾2', 'Lv1 日本0', 'Lv2 日本0', 'Lv3 日本0', 'Lv1 日本1', 'Lv2 日本1', 'Lv3 日本1', 'Lv1 日本2', 'Lv2 日本2', 'Lv3 日本2', 'Lv1 日本3', 'Lv2 日本3', 'Lv3 日本3', 'Lv1 日本5', 'Lv2 日本5', 'Lv3 日本5', 'Lv1 韩国1', 'Lv2 韩国1', 'Lv3 韩国1', 'Lv1 韩国2', 'Lv2 韩国2', 'Lv3 韩国2', 'Lv1 韩国4', 'Lv2 韩国4', 'Lv3 韩国4', 'Lv1 韩国5', 'Lv2 韩国5', 'Lv3 韩国5', 'Lv1 新加坡1', 'Lv2 新加坡1', 'Lv3 新加坡1', 'Lv1 新加坡2', 'Lv2 新加坡2', 'Lv3 新加坡2', 'Lv1 新加坡3', 'Lv2 新加坡3', 'Lv3 新加坡3', 'Lv1 新加坡4', 'Lv2 新加坡4', 'Lv3 新加坡4', 'Lv1 新加坡6', 'Lv2 新加坡6', 'Lv3 新加坡6', 'Lv1 英国1', 'Lv2 英国1', 'Lv3 英国1', 'Lv1 英国2', 'Lv2 英国2', 'Lv3 英国2', 'Lv1 美国1', 'Lv2 美国1', 'Lv3 美国1', 'Lv1 美国3', 'Lv2 美国3', 'Lv3 美国3', 'Lv1 美国4', 'Lv2 美国4', 'Lv3 美国4', 'Lv1 美国5', 'Lv2 美国5', 'Lv3 美国5', 'Lv1 美国6', 'Lv2 美国6', 'Lv3 美国6', 'Lv1 迪拜', 'Lv2 迪拜', 'Lv3 迪拜', 'Lv1 越南', 'Lv2 越南', 'Lv3 越南', 'Lv1 荷兰', 'LV2 荷兰', 'Lv3 荷兰', 'Lv1 马来西亚 x5', 'Lv2 马来西亚 x5', 'Lv3 马来西亚 x5', 'Lv1 印尼', 'Lv2 印尼', 'Lv3 印尼', 'Lv1 土耳其 X5', 'Lv2 土耳其 X5', 'Lv3 土耳其 X5', 'Lv1 土耳其2 原生', 'Lv2 土耳其2 原生', 'Lv3 土耳其2 原生', 'Lv1 印度', 'Lv2 印度', 'Lv3 印度', 'Lv1 阿根廷 x10', 'Lv2 阿根廷 x10', 'Lv3 阿根廷 x10', '泰國-曼谷 X10', '菲律賓 X10', 俄罗斯] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：9699.64 GB', 套餐到期：长期有效, '通知页: okz8.com 客服在右下角', '官网: okzlist.com 客服在右下角', 专线1, 专线2, 专线3, 专线4, 专线5, 专线6, 专线7, 专线8, 'Lv1 香港', 'Lv2 香港', 'Lv3 香港', 'Lv1 香港1', 'Lv2 香港1', 'Lv3 香港1', 'Lv1 香港2', 'Lv2 香港2', 'Lv3 香港2', 'Lv1 香港4', 'Lv2 香港4', 'Lv3 香港4', 'Lv1 香港5', 'Lv2 香港5', 'Lv3 香港5', 'Lv1 香港6', 'Lv2 香港6', 'Lv3 香港6', 'Lv1 香港7', 'Lv2 香港7', 'Lv3 香港7', 'Lv1 台湾2', 'Lv2 台湾2', 'Lv3 台湾2', 'Lv1 日本0', 'Lv2 日本0', 'Lv3 日本0', 'Lv1 日本1', 'Lv2 日本1', 'Lv3 日本1', 'Lv1 日本2', 'Lv2 日本2', 'Lv3 日本2', 'Lv1 日本3', 'Lv2 日本3', 'Lv3 日本3', 'Lv1 日本5', 'Lv2 日本5', 'Lv3 日本5', 'Lv1 韩国1', 'Lv2 韩国1', 'Lv3 韩国1', 'Lv1 韩国2', 'Lv2 韩国2', 'Lv3 韩国2', 'Lv1 韩国4', 'Lv2 韩国4', 'Lv3 韩国4', 'Lv1 韩国5', 'Lv2 韩国5', 'Lv3 韩国5', 'Lv1 新加坡1', 'Lv2 新加坡1', 'Lv3 新加坡1', 'Lv1 新加坡2', 'Lv2 新加坡2', 'Lv3 新加坡2', 'Lv1 新加坡3', 'Lv2 新加坡3', 'Lv3 新加坡3', 'Lv1 新加坡4', 'Lv2 新加坡4', 'Lv3 新加坡4', 'Lv1 新加坡6', 'Lv2 新加坡6', 'Lv3 新加坡6', 'Lv1 英国1', 'Lv2 英国1', 'Lv3 英国1', 'Lv1 英国2', 'Lv2 英国2', 'Lv3 英国2', 'Lv1 美国1', 'Lv2 美国1', 'Lv3 美国1', 'Lv1 美国3', 'Lv2 美国3', 'Lv3 美国3', 'Lv1 美国4', 'Lv2 美国4', 'Lv3 美国4', 'Lv1 美国5', 'Lv2 美国5', 'Lv3 美国5', 'Lv1 美国6', 'Lv2 美国6', 'Lv3 美国6', 'Lv1 迪拜', 'Lv2 迪拜', 'Lv3 迪拜', 'Lv1 越南', 'Lv2 越南', 'Lv3 越南', 'Lv1 荷兰', 'LV2 荷兰', 'Lv3 荷兰', 'Lv1 马来西亚 x5', 'Lv2 马来西亚 x5', 'Lv3 马来西亚 x5', 'Lv1 印尼', 'Lv2 印尼', 'Lv3 印尼', 'Lv1 土耳其 X5', 'Lv2 土耳其 X5', 'Lv3 土耳其 X5', 'Lv1 土耳其2 原生', 'Lv2 土耳其2 原生', 'Lv3 土耳其2 原生', 'Lv1 印度', 'Lv2 印度', 'Lv3 印度', 'Lv1 阿根廷 x10', 'Lv2 阿根廷 x10', 'Lv3 阿根廷 x10', '泰國-曼谷 X10', '菲律賓 X10', 俄罗斯], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：9699.64 GB', 套餐到期：长期有效, '通知页: okz8.com 客服在右下角', '官网: okzlist.com 客服在右下角', 专线1, 专线2, 专线3, 专线4, 专线5, 专线6, 专线7, 专线8, 'Lv1 香港', 'Lv2 香港', 'Lv3 香港', 'Lv1 香港1', 'Lv2 香港1', 'Lv3 香港1', 'Lv1 香港2', 'Lv2 香港2', 'Lv3 香港2', 'Lv1 香港4', 'Lv2 香港4', 'Lv3 香港4', 'Lv1 香港5', 'Lv2 香港5', 'Lv3 香港5', 'Lv1 香港6', 'Lv2 香港6', 'Lv3 香港6', 'Lv1 香港7', 'Lv2 香港7', 'Lv3 香港7', 'Lv1 台湾2', 'Lv2 台湾2', 'Lv3 台湾2', 'Lv1 日本0', 'Lv2 日本0', 'Lv3 日本0', 'Lv1 日本1', 'Lv2 日本1', 'Lv3 日本1', 'Lv1 日本2', 'Lv2 日本2', 'Lv3 日本2', 'Lv1 日本3', 'Lv2 日本3', 'Lv3 日本3', 'Lv1 日本5', 'Lv2 日本5', 'Lv3 日本5', 'Lv1 韩国1', 'Lv2 韩国1', 'Lv3 韩国1', 'Lv1 韩国2', 'Lv2 韩国2', 'Lv3 韩国2', 'Lv1 韩国4', 'Lv2 韩国4', 'Lv3 韩国4', 'Lv1 韩国5', 'Lv2 韩国5', 'Lv3 韩国5', 'Lv1 新加坡1', 'Lv2 新加坡1', 'Lv3 新加坡1', 'Lv1 新加坡2', 'Lv2 新加坡2', 'Lv3 新加坡2', 'Lv1 新加坡3', 'Lv2 新加坡3', 'Lv3 新加坡3', 'Lv1 新加坡4', 'Lv2 新加坡4', 'Lv3 新加坡4', 'Lv1 新加坡6', 'Lv2 新加坡6', 'Lv3 新加坡6', 'Lv1 英国1', 'Lv2 英国1', 'Lv3 英国1', 'Lv1 英国2', 'Lv2 英国2', 'Lv3 英国2', 'Lv1 美国1', 'Lv2 美国1', 'Lv3 美国1', 'Lv1 美国3', 'Lv2 美国3', 'Lv3 美国3', 'Lv1 美国4', 'Lv2 美国4', 'Lv3 美国4', 'Lv1 美国5', 'Lv2 美国5', 'Lv3 美国5', 'Lv1 美国6', 'Lv2 美国6', 'Lv3 美国6', 'Lv1 迪拜', 'Lv2 迪拜', 'Lv3 迪拜', 'Lv1 越南', 'Lv2 越南', 'Lv3 越南', 'Lv1 荷兰', 'LV2 荷兰', 'Lv3 荷兰', 'Lv1 马来西亚 x5', 'Lv2 马来西亚 x5', 'Lv3 马来西亚 x5', 'Lv1 印尼', 'Lv2 印尼', 'Lv3 印尼', 'Lv1 土耳其 X5', 'Lv2 土耳其 X5', 'Lv3 土耳其 X5', 'Lv1 土耳其2 原生', 'Lv2 土耳其2 原生', 'Lv3 土耳其2 原生', 'Lv1 印度', 'Lv2 印度', 'Lv3 印度', 'Lv1 阿根廷 x10', 'Lv2 阿根廷 x10', 'Lv3 阿根廷 x10', '泰國-曼谷 X10', '菲律賓 X10', 俄罗斯], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+rules:
+    - 'DOMAIN,roy10172.xn--l6q948csgdz41ai1y.com,DIRECT'
+    - 'DOMAIN-SUFFIX,services.googleapis.cn,OKZTWO'
+    - 'DOMAIN-SUFFIX,xn--ngstr-lra8j.com,OKZTWO'
+    - 'DOMAIN,safebrowsing.urlsec.qq.com,DIRECT'
+    - 'DOMAIN,safebrowsing.googleapis.com,DIRECT'
+    - 'DOMAIN,developer.apple.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,digicert.com,OKZTWO'
+    - 'DOMAIN,ocsp.apple.com,OKZTWO'
+    - 'DOMAIN,ocsp.comodoca.com,OKZTWO'
+    - 'DOMAIN,ocsp.usertrust.com,OKZTWO'
+    - 'DOMAIN,ocsp.sectigo.com,OKZTWO'
+    - 'DOMAIN,ocsp.verisign.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,apple-dns.net,OKZTWO'
+    - 'DOMAIN,testflight.apple.com,OKZTWO'
+    - 'DOMAIN,sandbox.itunes.apple.com,OKZTWO'
+    - 'DOMAIN,itunes.apple.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,apps.apple.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,blobstore.apple.com,OKZTWO'
+    - 'DOMAIN,cvws.icloud-content.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,mzstatic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,itunes.apple.com,DIRECT'
+    - 'DOMAIN-SUFFIX,icloud.com,DIRECT'
+    - 'DOMAIN-SUFFIX,icloud-content.com,DIRECT'
+    - 'DOMAIN-SUFFIX,me.com,DIRECT'
+    - 'DOMAIN-SUFFIX,aaplimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cdn20.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cdn-apple.com,DIRECT'
+    - 'DOMAIN-SUFFIX,akadns.net,DIRECT'
+    - 'DOMAIN-SUFFIX,akamaiedge.net,DIRECT'
+    - 'DOMAIN-SUFFIX,edgekey.net,DIRECT'
+    - 'DOMAIN-SUFFIX,mwcloudcdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,mwcname.com,DIRECT'
+    - 'DOMAIN-SUFFIX,apple.com,DIRECT'
+    - 'DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT'
+    - 'DOMAIN-SUFFIX,apple-mapkit.com,DIRECT'
+    - 'DOMAIN-SUFFIX,126.com,DIRECT'
+    - 'DOMAIN-SUFFIX,126.net,DIRECT'
+    - 'DOMAIN-SUFFIX,127.net,DIRECT'
+    - 'DOMAIN-SUFFIX,163.com,DIRECT'
+    - 'DOMAIN-SUFFIX,360buyimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,36kr.com,DIRECT'
+    - 'DOMAIN-SUFFIX,acfun.tv,DIRECT'
+    - 'DOMAIN-SUFFIX,air-matters.com,DIRECT'
+    - 'DOMAIN-SUFFIX,aixifan.com,DIRECT'
+    - 'DOMAIN-KEYWORD,alicdn,DIRECT'
+    - 'DOMAIN-KEYWORD,alipay,DIRECT'
+    - 'DOMAIN-KEYWORD,taobao,DIRECT'
+    - 'DOMAIN-SUFFIX,amap.com,DIRECT'
+    - 'DOMAIN-SUFFIX,autonavi.com,DIRECT'
+    - 'DOMAIN-KEYWORD,baidu,DIRECT'
+    - 'DOMAIN-SUFFIX,bdimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,bdstatic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,bilibili.com,DIRECT'
+    - 'DOMAIN-SUFFIX,bilivideo.com,DIRECT'
+    - 'DOMAIN-SUFFIX,caiyunapp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,clouddn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cnbeta.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cnbetacdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cootekservice.com,DIRECT'
+    - 'DOMAIN-SUFFIX,csdn.net,DIRECT'
+    - 'DOMAIN-SUFFIX,ctrip.com,DIRECT'
+    - 'DOMAIN-SUFFIX,dgtle.com,DIRECT'
+    - 'DOMAIN-SUFFIX,dianping.com,DIRECT'
+    - 'DOMAIN-SUFFIX,douban.com,DIRECT'
+    - 'DOMAIN-SUFFIX,doubanio.com,DIRECT'
+    - 'DOMAIN-SUFFIX,duokan.com,DIRECT'
+    - 'DOMAIN-SUFFIX,easou.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ele.me,DIRECT'
+    - 'DOMAIN-SUFFIX,feng.com,DIRECT'
+    - 'DOMAIN-SUFFIX,fir.im,DIRECT'
+    - 'DOMAIN-SUFFIX,frdic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,g-cores.com,DIRECT'
+    - 'DOMAIN-SUFFIX,godic.net,DIRECT'
+    - 'DOMAIN-SUFFIX,gtimg.com,DIRECT'
+    - 'DOMAIN,cdn.hockeyapp.net,DIRECT'
+    - 'DOMAIN-SUFFIX,hongxiu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,hxcdn.net,DIRECT'
+    - 'DOMAIN-SUFFIX,iciba.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ifeng.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ifengimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ipip.net,DIRECT'
+    - 'DOMAIN-SUFFIX,iqiyi.com,DIRECT'
+    - 'DOMAIN-SUFFIX,jd.com,DIRECT'
+    - 'DOMAIN-SUFFIX,jianshu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,knewone.com,DIRECT'
+    - 'DOMAIN-SUFFIX,le.com,DIRECT'
+    - 'DOMAIN-SUFFIX,lecloud.com,DIRECT'
+    - 'DOMAIN-SUFFIX,lemicp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,licdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,luoo.net,DIRECT'
+    - 'DOMAIN-SUFFIX,meituan.com,DIRECT'
+    - 'DOMAIN-SUFFIX,meituan.net,DIRECT'
+    - 'DOMAIN-SUFFIX,mi.com,DIRECT'
+    - 'DOMAIN-SUFFIX,miaopai.com,DIRECT'
+    - 'DOMAIN-SUFFIX,microsoft.com,DIRECT'
+    - 'DOMAIN-SUFFIX,microsoftonline.com,DIRECT'
+    - 'DOMAIN-SUFFIX,miui.com,DIRECT'
+    - 'DOMAIN-SUFFIX,miwifi.com,DIRECT'
+    - 'DOMAIN-SUFFIX,mob.com,DIRECT'
+    - 'DOMAIN-SUFFIX,netease.com,DIRECT'
+    - 'DOMAIN-SUFFIX,office.com,DIRECT'
+    - 'DOMAIN-SUFFIX,office365.com,DIRECT'
+    - 'DOMAIN-KEYWORD,officecdn,DIRECT'
+    - 'DOMAIN-SUFFIX,oschina.net,DIRECT'
+    - 'DOMAIN-SUFFIX,ppsimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,pstatp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qcloud.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qdaily.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qdmm.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qhimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qhres.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qidian.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qihucdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qiniu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qiniucdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qiyipic.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qq.com,DIRECT'
+    - 'DOMAIN-SUFFIX,qqurl.com,DIRECT'
+    - 'DOMAIN-SUFFIX,rarbg.to,DIRECT'
+    - 'DOMAIN-SUFFIX,ruguoapp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,segmentfault.com,DIRECT'
+    - 'DOMAIN-SUFFIX,sinaapp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,smzdm.com,DIRECT'
+    - 'DOMAIN-SUFFIX,snapdrop.net,DIRECT'
+    - 'DOMAIN-SUFFIX,sogou.com,DIRECT'
+    - 'DOMAIN-SUFFIX,sogoucdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,sohu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,soku.com,DIRECT'
+    - 'DOMAIN-SUFFIX,speedtest.net,DIRECT'
+    - 'DOMAIN-SUFFIX,sspai.com,DIRECT'
+    - 'DOMAIN-SUFFIX,suning.com,DIRECT'
+    - 'DOMAIN-SUFFIX,taobao.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tencent.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tenpay.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tianyancha.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tmall.com,DIRECT'
+    - 'DOMAIN-SUFFIX,tudou.com,DIRECT'
+    - 'DOMAIN-SUFFIX,umetrip.com,DIRECT'
+    - 'DOMAIN-SUFFIX,upaiyun.com,DIRECT'
+    - 'DOMAIN-SUFFIX,upyun.com,DIRECT'
+    - 'DOMAIN-SUFFIX,veryzhun.com,DIRECT'
+    - 'DOMAIN-SUFFIX,weather.com,DIRECT'
+    - 'DOMAIN-SUFFIX,weibo.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xiami.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xiami.net,DIRECT'
+    - 'DOMAIN-SUFFIX,xiaomicp.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ximalaya.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xmcdn.com,DIRECT'
+    - 'DOMAIN-SUFFIX,xunlei.com,DIRECT'
+    - 'DOMAIN-SUFFIX,yhd.com,DIRECT'
+    - 'DOMAIN-SUFFIX,yihaodianimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,yinxiang.com,DIRECT'
+    - 'DOMAIN-SUFFIX,ykimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,youdao.com,DIRECT'
+    - 'DOMAIN-SUFFIX,youku.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zealer.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zhihu.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zhimg.com,DIRECT'
+    - 'DOMAIN-SUFFIX,zimuzu.tv,DIRECT'
+    - 'DOMAIN-SUFFIX,zoho.com,DIRECT'
+    - 'DOMAIN-KEYWORD,amazon,OKZTWO'
+    - 'DOMAIN-KEYWORD,google,OKZTWO'
+    - 'DOMAIN-KEYWORD,gmail,OKZTWO'
+    - 'DOMAIN-KEYWORD,youtube,OKZTWO'
+    - 'DOMAIN-KEYWORD,facebook,OKZTWO'
+    - 'DOMAIN-SUFFIX,fb.me,OKZTWO'
+    - 'DOMAIN-SUFFIX,fbcdn.net,OKZTWO'
+    - 'DOMAIN-KEYWORD,twitter,OKZTWO'
+    - 'DOMAIN-KEYWORD,instagram,OKZTWO'
+    - 'DOMAIN-KEYWORD,dropbox,OKZTWO'
+    - 'DOMAIN-SUFFIX,twimg.com,OKZTWO'
+    - 'DOMAIN-KEYWORD,blogspot,OKZTWO'
+    - 'DOMAIN-SUFFIX,youtu.be,OKZTWO'
+    - 'DOMAIN-KEYWORD,whatsapp,OKZTWO'
+    - 'DOMAIN-KEYWORD,admarvel,REJECT'
+    - 'DOMAIN-KEYWORD,admaster,REJECT'
+    - 'DOMAIN-KEYWORD,adsage,REJECT'
+    - 'DOMAIN-KEYWORD,adsmogo,REJECT'
+    - 'DOMAIN-KEYWORD,adsrvmedia,REJECT'
+    - 'DOMAIN-KEYWORD,adwords,REJECT'
+    - 'DOMAIN-KEYWORD,adservice,REJECT'
+    - 'DOMAIN-SUFFIX,appsflyer.com,REJECT'
+    - 'DOMAIN-KEYWORD,domob,REJECT'
+    - 'DOMAIN-SUFFIX,doubleclick.net,REJECT'
+    - 'DOMAIN-KEYWORD,dwtrack,REJECT'
+    - 'DOMAIN-KEYWORD,guanggao,REJECT'
+    - 'DOMAIN-KEYWORD,lianmeng,REJECT'
+    - 'DOMAIN-SUFFIX,mmstat.com,REJECT'
+    - 'DOMAIN-KEYWORD,mopub,REJECT'
+    - 'DOMAIN-KEYWORD,omgmta,REJECT'
+    - 'DOMAIN-KEYWORD,openx,REJECT'
+    - 'DOMAIN-KEYWORD,partnerad,REJECT'
+    - 'DOMAIN-KEYWORD,pingfore,REJECT'
+    - 'DOMAIN-KEYWORD,supersonicads,REJECT'
+    - 'DOMAIN-KEYWORD,uedas,REJECT'
+    - 'DOMAIN-KEYWORD,umeng,REJECT'
+    - 'DOMAIN-KEYWORD,usage,REJECT'
+    - 'DOMAIN-SUFFIX,vungle.com,REJECT'
+    - 'DOMAIN-KEYWORD,wlmonitor,REJECT'
+    - 'DOMAIN-KEYWORD,zjtoolbar,REJECT'
+    - 'DOMAIN-SUFFIX,9to5mac.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,abpchina.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,adblockplus.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,adobe.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,akamaized.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,alfredapp.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,amplitude.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,ampproject.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,android.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,angularjs.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,aolcdn.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,apkpure.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,appledaily.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,appshopper.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,appspot.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,arcgis.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,archive.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,armorgames.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,aspnetcdn.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,att.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,awsstatic.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,azureedge.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,azurewebsites.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,bing.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,bintray.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,bit.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,bit.ly,OKZTWO'
+    - 'DOMAIN-SUFFIX,bitbucket.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,bjango.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,bkrtx.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,blog.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,blogcdn.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,blogger.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,blogsmithmedia.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,blogspot.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,blogspot.hk,OKZTWO'
+    - 'DOMAIN-SUFFIX,bloomberg.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,box.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,box.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,cachefly.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,chromium.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,cl.ly,OKZTWO'
+    - 'DOMAIN-SUFFIX,cloudflare.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,cloudfront.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,cloudmagic.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,cmail19.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,cnet.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,cocoapods.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,comodoca.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,crashlytics.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,culturedcode.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,d.pr,OKZTWO'
+    - 'DOMAIN-SUFFIX,danilo.to,OKZTWO'
+    - 'DOMAIN-SUFFIX,dayone.me,OKZTWO'
+    - 'DOMAIN-SUFFIX,db.tt,OKZTWO'
+    - 'DOMAIN-SUFFIX,deskconnect.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,disq.us,OKZTWO'
+    - 'DOMAIN-SUFFIX,disqus.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,disquscdn.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,dnsimple.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,docker.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,dribbble.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,droplr.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,duckduckgo.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,dueapp.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,dytt8.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,edgecastcdn.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,edgekey.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,edgesuite.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,engadget.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,entrust.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,eurekavpt.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,evernote.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,fabric.io,OKZTWO'
+    - 'DOMAIN-SUFFIX,fast.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,fastly.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,fc2.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,feedburner.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,feedly.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,feedsportal.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,fiftythree.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,firebaseio.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,flexibits.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,flickr.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,flipboard.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,g.co,OKZTWO'
+    - 'DOMAIN-SUFFIX,gabia.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,geni.us,OKZTWO'
+    - 'DOMAIN-SUFFIX,gfx.ms,OKZTWO'
+    - 'DOMAIN-SUFFIX,ggpht.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,ghostnoteapp.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,git.io,OKZTWO'
+    - 'DOMAIN-KEYWORD,github,OKZTWO'
+    - 'DOMAIN-SUFFIX,globalsign.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,gmodules.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,godaddy.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,golang.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,gongm.in,OKZTWO'
+    - 'DOMAIN-SUFFIX,goo.gl,OKZTWO'
+    - 'DOMAIN-SUFFIX,goodreaders.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,goodreads.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,gravatar.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,gstatic.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,gvt0.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,hockeyapp.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,hotmail.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,icons8.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,ifixit.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,ift.tt,OKZTWO'
+    - 'DOMAIN-SUFFIX,ifttt.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,iherb.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,imageshack.us,OKZTWO'
+    - 'DOMAIN-SUFFIX,img.ly,OKZTWO'
+    - 'DOMAIN-SUFFIX,imgur.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,imore.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,instapaper.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,ipn.li,OKZTWO'
+    - 'DOMAIN-SUFFIX,is.gd,OKZTWO'
+    - 'DOMAIN-SUFFIX,issuu.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,itgonglun.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,itun.es,OKZTWO'
+    - 'DOMAIN-SUFFIX,ixquick.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,j.mp,OKZTWO'
+    - 'DOMAIN-SUFFIX,js.revsci.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,jshint.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,jtvnw.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,justgetflux.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,kat.cr,OKZTWO'
+    - 'DOMAIN-SUFFIX,klip.me,OKZTWO'
+    - 'DOMAIN-SUFFIX,libsyn.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,linkedin.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,line-apps.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,linode.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,lithium.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,littlehj.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,live.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,live.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,livefilestore.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,llnwd.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,macid.co,OKZTWO'
+    - 'DOMAIN-SUFFIX,macromedia.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,macrumors.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,mashable.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,mathjax.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,medium.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,mega.co.nz,OKZTWO'
+    - 'DOMAIN-SUFFIX,mega.nz,OKZTWO'
+    - 'DOMAIN-SUFFIX,megaupload.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,microsofttranslator.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,mindnode.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,mobile01.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,modmyi.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,msedge.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,myfontastic.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,name.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,nextmedia.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,nsstatic.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,nssurge.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,nyt.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,nytimes.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,omnigroup.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,onedrive.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,onenote.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,ooyala.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,openvpn.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,openwrt.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,orkut.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,osxdaily.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,outlook.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,ow.ly,OKZTWO'
+    - 'DOMAIN-SUFFIX,paddleapi.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,parallels.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,parse.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,pdfexpert.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,periscope.tv,OKZTWO'
+    - 'DOMAIN-SUFFIX,pinboard.in,OKZTWO'
+    - 'DOMAIN-SUFFIX,pinterest.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,pixelmator.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,pixiv.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,playpcesor.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,playstation.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,playstation.com.hk,OKZTWO'
+    - 'DOMAIN-SUFFIX,playstation.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,playstationnetwork.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,pushwoosh.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,rime.im,OKZTWO'
+    - 'DOMAIN-SUFFIX,servebom.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,sfx.ms,OKZTWO'
+    - 'DOMAIN-SUFFIX,shadowsocks.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,sharethis.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,shazam.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,skype.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,smartdnsOKZTWO.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,smartmailcloud.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,sndcdn.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,sony.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,soundcloud.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,sourceforge.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,spotify.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,squarespace.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,sstatic.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,st.luluku.pw,OKZTWO'
+    - 'DOMAIN-SUFFIX,stackoverflow.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,startpage.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,staticflickr.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,steamcommunity.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,symauth.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,symcb.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,symcd.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,tapbots.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,tapbots.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,tdesktop.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,techcrunch.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,techsmith.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,thepiratebay.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,theverge.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,time.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,timeinc.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,tiny.cc,OKZTWO'
+    - 'DOMAIN-SUFFIX,tinypic.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,tmblr.co,OKZTWO'
+    - 'DOMAIN-SUFFIX,todoist.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,trello.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,trustasiassl.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,tumblr.co,OKZTWO'
+    - 'DOMAIN-SUFFIX,tumblr.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,tweetdeck.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,tweetmarker.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,twitch.tv,OKZTWO'
+    - 'DOMAIN-SUFFIX,txmblr.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,typekit.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,ubertags.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,ublock.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,ubnt.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,ulyssesapp.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,urchin.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,usertrust.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,v.gd,OKZTWO'
+    - 'DOMAIN-SUFFIX,v2ex.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,vimeo.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,vimeocdn.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,vine.co,OKZTWO'
+    - 'DOMAIN-SUFFIX,vivaldi.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,vox-cdn.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,vsco.co,OKZTWO'
+    - 'DOMAIN-SUFFIX,vultr.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,w.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,w3schools.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,webtype.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,wikiwand.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,wikileaks.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,wikimedia.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,wikipedia.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,wikipedia.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,windows.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,windows.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,wire.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,wordpress.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,workflowy.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,wp.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,wsj.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,wsj.net,OKZTWO'
+    - 'DOMAIN-SUFFIX,xda-developers.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,xeeno.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,xiti.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,yahoo.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,yimg.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,ying.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,yoyo.org,OKZTWO'
+    - 'DOMAIN-SUFFIX,ytimg.com,OKZTWO'
+    - 'DOMAIN-SUFFIX,telegra.ph,OKZTWO'
+    - 'DOMAIN-SUFFIX,telegram.org,OKZTWO'
+    - 'IP-CIDR,91.108.4.0/22,OKZTWO,no-resolve'
+    - 'IP-CIDR,91.108.8.0/21,OKZTWO,no-resolve'
+    - 'IP-CIDR,91.108.16.0/22,OKZTWO,no-resolve'
+    - 'IP-CIDR,91.108.56.0/22,OKZTWO,no-resolve'
+    - 'IP-CIDR,149.154.160.0/20,OKZTWO,no-resolve'
+    - 'IP-CIDR6,2001:67c:4e8::/48,OKZTWO,no-resolve'
+    - 'IP-CIDR6,2001:b28:f23d::/48,OKZTWO,no-resolve'
+    - 'IP-CIDR6,2001:b28:f23f::/48,OKZTWO,no-resolve'
+    - 'IP-CIDR,120.232.181.162/32,OKZTWO,no-resolve'
+    - 'IP-CIDR,120.241.147.226/32,OKZTWO,no-resolve'
+    - 'IP-CIDR,120.253.253.226/32,OKZTWO,no-resolve'
+    - 'IP-CIDR,120.253.255.162/32,OKZTWO,no-resolve'
+    - 'IP-CIDR,120.253.255.34/32,OKZTWO,no-resolve'
+    - 'IP-CIDR,120.253.255.98/32,OKZTWO,no-resolve'
+    - 'IP-CIDR,180.163.150.162/32,OKZTWO,no-resolve'
+    - 'IP-CIDR,180.163.150.34/32,OKZTWO,no-resolve'
+    - 'IP-CIDR,180.163.151.162/32,OKZTWO,no-resolve'
+    - 'IP-CIDR,180.163.151.34/32,OKZTWO,no-resolve'
+    - 'IP-CIDR,203.208.39.0/24,OKZTWO,no-resolve'
+    - 'IP-CIDR,203.208.40.0/24,OKZTWO,no-resolve'
+    - 'IP-CIDR,203.208.41.0/24,OKZTWO,no-resolve'
+    - 'IP-CIDR,203.208.43.0/24,OKZTWO,no-resolve'
+    - 'IP-CIDR,203.208.50.0/24,OKZTWO,no-resolve'
+    - 'IP-CIDR,220.181.174.162/32,OKZTWO,no-resolve'
+    - 'IP-CIDR,220.181.174.226/32,OKZTWO,no-resolve'
+    - 'IP-CIDR,220.181.174.34/32,OKZTWO,no-resolve'
+    - 'DOMAIN,injections.adguard.org,DIRECT'
+    - 'DOMAIN,local.adguard.org,DIRECT'
+    - 'DOMAIN-SUFFIX,local,DIRECT'
+    - 'IP-CIDR,127.0.0.0/8,DIRECT'
+    - 'IP-CIDR,172.16.0.0/12,DIRECT'
+    - 'IP-CIDR,192.168.0.0/16,DIRECT'
+    - 'IP-CIDR,10.0.0.0/8,DIRECT'
+    - 'IP-CIDR,17.0.0.0/8,DIRECT'
+    - 'IP-CIDR,100.64.0.0/10,DIRECT'
+    - 'IP-CIDR,224.0.0.0/4,DIRECT'
+    - 'IP-CIDR6,fe80::/10,DIRECT'
+    - 'DOMAIN-SUFFIX,cn,DIRECT'
+    - 'DOMAIN-KEYWORD,-cn,DIRECT'
+    - 'GEOIP,CN,DIRECT'
+    - 'MATCH,OKZTWO'
